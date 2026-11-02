@@ -31,7 +31,7 @@ const Register = () => {
     <div className="min-h-screen bg-[#141218] text-[#e6e0e9] font-['Inter',sans-serif]">
       {/* Header */}
       <header className="fixed top-0 left-0 z-50 w-full px-6 py-4">
-        <h2 className="text-xl font-bold tracking-tight">Synthetix AI</h2>
+        <h2 className="text-xl font-bold tracking-tight">Team-Sync</h2>
       </header>
 
       <main className="flex min-h-screen">
@@ -322,7 +322,7 @@ const Register = () => {
 
       {/* Footer */}
       <footer className="flex flex-col items-center justify-between gap-4 border-t border-[#494551]/20 bg-[#141218] px-6 py-8 md:flex-row">
-        <div className="text-xl font-bold">Synthetix AI</div>
+        <div className="text-xl font-bold">Team-Sync</div>
 
         <div className="flex flex-wrap justify-center gap-6">
           <a href="#" className="text-xs text-[#cbc4d2] hover:text-white">
@@ -343,7 +343,7 @@ const Register = () => {
         </div>
 
         <p className="text-xs text-[#cbc4d2]">
-          © 2024 Synthetix AI. Enterprise Intelligence Platforms.
+          © 2024 Team-Sync. Enterprise Intelligence Platforms.
         </p>
       </footer>
     </div>

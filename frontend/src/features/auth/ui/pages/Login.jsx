@@ -38,7 +38,7 @@ const Login = () => {
               </div>
 
               <h1 className="text-2xl font-semibold tracking-tight">
-                Synthetix AI
+                Team-Sync
               </h1>
 
               <p className="mt-1 text-sm text-[#cbc4d2]">
@@ -223,7 +223,7 @@ const Login = () => {
           {/* Footer Meta */}
           <div className="mt-6 text-center">
             <p className="text-xs text-[#948e9c]/50">
-              © 2024 Synthetix AI. Enterprise Intelligence Platforms.
+              © 2024 Team-Sync. Enterprise Intelligence Platforms.
             </p>
 
             <div className="mt-3 flex justify-center gap-4">
