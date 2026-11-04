@@ -1,9 +1,45 @@
-
+import { Outlet } from "react-router";
+import { useEmployee } from "../../hooks/useEmployees";
+import EmployeeHeader from "../components/employees/EmployeeHeader";
+import EmployeeStats from "../components/employees/EmployeeStats";
+import EmployeeTable from "../components/employees/EmployeeTable";
+import Pagination from "../components/employees/Pagination";
+import SearchFilterBar from "../components/employees/SearchFilterBar";
 
 const Employee = () => {
-  return (
-    <div>Employee</div>
-  )
-}
+  const { data, isPending, isFetching, handlePageChange, filters, handleSearchFilters } = useEmployee();
 
-export default Employee
+  if (isPending) return <h1>Loading....</h1>;
+
+  return (
+    <div className="min-h-screen bg-(--bg-main) p-8">
+      <div className=" mx-auto">
+        <Outlet />
+        {/* HEADER */}
+        <EmployeeHeader />
+
+        {/* STATS */}
+        <EmployeeStats employees={data?.employees} />
+
+        {/* TABLE SECTION */}
+        <div className="mt-8 bg-(--bg-surface) border border-(--border-color) rounded-3xl overflow-hidden">
+          <SearchFilterBar
+            filters={filters}
+            handleSearchFilters={handleSearchFilters}
+          />
+
+          {isFetching && <h1>Loading next page data</h1>}
+
+          <EmployeeTable employees={data?.employees} />
+
+          <Pagination
+            pagination={data?.pagination}
+            onPageChange={handlePageChange}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Employee;

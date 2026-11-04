@@ -1,6 +1,7 @@
 import { ChartAreaIcon } from "lucide-react";
 import { NavLink } from "react-router";
 
+// eslint-disable-next-line no-unused-vars
 const NavigationTab = ({ path, Icon, title }) => {
   return (
     <NavLink
